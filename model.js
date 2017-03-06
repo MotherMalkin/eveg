@@ -109,6 +109,8 @@ function addToBasket(product, quantity) {
     createEmptyBasket();
   }
 
+  if (quantity != parseInt(quantity)) return;
+
   oldquantity = parseInt(getProductQuantity(product));
   newquantity = oldquantity + parseInt(quantity);
 
