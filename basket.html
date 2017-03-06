@@ -77,28 +77,32 @@
 
             <div id="products" class="row list-group">
                 <script>
-                    var productDetails = readBasket();
+                    var productDetails = getProductDetails();
+                    var basket = readBasket();
                     for(var product in productDetails)
                     {
-                        document.write('<div class="item  col-xs-4 col-lg-4">')
-                        document.write('<div class="thumbnail">')
-                        document.write('<img class="group list-group-image" src="img/' + productDetails[product]["image"] 
-                            + '" alt="" style="width:80px;height:60px;"/>')
-                        document.write('<div class="caption">')
-                        document.write('<h4 class="group inner list-group-item-heading">' + productDetails[product]["name"] + '</h4>')
-                        document.write('<p class="group inner list-group-item-text">' + productDetails[product]["description"] + '</p>')
-                        document.write('<div class="row">')
-                        document.write('<div class="col-xs-12 col-md-6">')
-                        document.write('<p class="lead">' + productDetails[product]["price"] + '$/' + productDetails[product]["units"]  + '</p>')
-                        document.write('</div>')
-                        document.write('<div class="col-xs-12 col-md-6">')
-                        document.write('<input name="' + product + '" id="' + product + '" type="text" value="" style="width: 30px;" />')
-                        document.write('<input name="add' + product + '" type="button" class="btn btn-success" value="Add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)"/>')
-                        document.write('</div>')
-                        document.write('</div>')
-                        document.write('</div>')
-                        document.write('</div>')
-                        document.write('</div>')
+                        console.log(product);
+                        if (basket[productDetails[product]['name'].toLowerCase()] > 0 ) {
+                            document.write('<div class="item  col-xs-4 col-lg-4">')
+                            document.write('<div class="thumbnail">')
+                            document.write('<img class="group list-group-image" src="img/' + productDetails[product]["image"] 
+                                + '" alt="" style="width:80px;height:60px;"/>')
+                            document.write('<div class="caption">')
+                            document.write('<h4 class="group inner list-group-item-heading">' + productDetails[product]["name"] + '</h4>')
+                            document.write('<p class="group inner list-group-item-text">' + productDetails[product]["description"] + '</p>')
+                            document.write('<div class="row">')
+                            document.write('<div class="col-xs-12 col-md-6">')
+                            document.write('<p class="lead">' + productDetails[product]["price"] + '$/' + productDetails[product]["units"]  + '</p>')
+                            document.write('</div>')
+                            document.write('<div class="col-xs-12 col-md-6">')
+                            document.write('<input name="' + product + '" id="' + product + '" type="text" value="" style="width: 30px;" />')
+                            document.write('<input name="add' + product + '" type="button" class="btn btn-success" value="Add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)"/>')
+                            document.write('</div>')
+                            document.write('</div>')
+                            document.write('</div>')
+                            document.write('</div>')
+                            document.write('</div>')
+                        }
                     }
                 </script>
             </div>
