@@ -110,7 +110,8 @@ function addToBasket(product, quantity) {
   }
 
   if (quantity != parseInt(quantity)) return;
-
+  document.getElementById('ghostHeader').style.display = 'block';
+  document.getElementById('ghostHeader').innerHTML = quantity + ' ' + product + ' added';
   oldquantity = parseInt(getProductQuantity(product));
   newquantity = oldquantity + parseInt(quantity);
 
