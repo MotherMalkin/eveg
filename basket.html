@@ -97,6 +97,11 @@
                             document.write('</div>')
                             document.write('<div class="col-xs-12 col-md-6">')
                             document.write('<p class="lead">Quantity = ' + quantity + '</p>')
+                            decreased = parseInt(quantity) - 1;
+                            increased = parseInt(quantity) + 1;
+                            document.write('<input name="decrease' + product + '" type="button" target="product.html" class="btn btn-success" value="-" onclick="javascript:changeProductQuantity(\'' + product + '\',' + decreased + '); window.location.reload();"/>')
+                            document.write('<input name="increase' + product + '" type="button" target="product.html" class="btn btn-success" value="+" onclick="javascript:changeProductQuantity(\'' + product + '\',' + increased + '); window.location.reload();"/>')
+                            document.write('<input name="remove' + product + '" type="button" target="product.html" class="btn btn-danger" value="X" onclick="javascript:removeProductFromBasket(\'' + product + '\'); window.location.reload();"/>')
                             document.write('</div>')
                             document.write('</div>')
                             document.write('</div>')
