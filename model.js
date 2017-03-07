@@ -1,3 +1,31 @@
+function createFAQ() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup-heading').innerHTML = 'FAQ';
+  document.getElementById('popup-content').innerHTML = "My items do not appear to be in the basket? <br><br>Refresh the page by pressing the refresh button beside the URL in your browser.  If the items still don't appear then reorder them from the products page. <br><br>Do you accept American Express?<br><br>At present time we only accept Solo, Switch, Mastercard, and Visa. <br><br>Do you ship outside of the UK?<br><br>At present we only ship within the UK.<br><br>Is there a way to remove my entire Basket?<br><br>At the bottom of the basket page click the 'Clear Basket' button."
+}
+
+function createOrderHelp() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup-heading').innerHTML = 'Help';
+  document.getElementById('popup-content').innerHTML = 'Fill in your details in the required locations.  When finished press the "Proceed" button to complete your order or press the "Cancel" button to return to your basket.<br><br>You can navigate back to the products or basket pages using the navigation bar at the top of the page.'
+}
+
+function createBasketHelp() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup-heading').innerHTML = 'Help';
+  document.getElementById('popup-content').innerHTML = 'Here you can view your shopping basket.  Displayed are each items cost and quantity.<br><br>To change the quantities of an item, use the green "+" and "-" buttons beside that item<br><br>To remove an item from your basket use the red "X" button beside that item.<br><br>You can navigate to the products page using the navigation bar at the top of the page.<br><br>To order the contents of you basket, click the order button at the bottom of the page, which will take you to the payment and shipping details page.<br><br>For further help, refer to our frequently asked questions page.'
+}
+
+function createProductHelp() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup-heading').innerHTML = 'Help';
+  document.getElementById('popup-content').innerHTML = 'To add an item to your shopping basket, type the desired amount into the input box then press the "Add to Basket" button.<br><br>You can navigate to your basket using the navigation bar at the top of the page.<br><br>For further help, refer to our frequently asked questions page.'
+}
+
+function closePanel() { 
+  document.getElementById('popup').style.display = 'none';
+}
+
 function getProductDetails() {
   productDetails = {};
   productDetails["carrots"] = {};

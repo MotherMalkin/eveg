@@ -60,14 +60,19 @@
     					<button type="submit" class="btn btn-default">Search</button>
     				</form>
     				<ul class="nav navbar-nav navbar-right">
-    					<li><a href="#">Help</a></li>
-    					<li><a href="#">FAQ</a></li>
+    					<li><a href="#" onclick="createProductHelp();" >Help</a></li>
+    					<li><a href="#" onclick="createFAQ();" >FAQ</a></li>
     				</ul>
     			</div>
     		</div>
     	</nav>
 
-    	<div class="container">
+        <div class="panel panel-default" id="popup" style="display:none; z-index:10; position:relative; left: 10%; right: 10%; width: 85%;">
+          <div class="panel-heading"><span id="popup-heading" style="padding-right: 90%;">Panel Heading</span> <input name="closePanel" type="button" style="width:5%;" class="btn btn-danger" value="X" onclick="closePanel();"/></div>
+          <div class="panel-body" id="popup-content" >Panel Content</div>
+        </div>
+
+    	<div class="container" style="z-index: -1; top: 140px; position: absolute; left: 10%; right: 10%;">
     		<div id="ghostHeader" class="well well-sm" style="display:none;">
             </div>
     		<div class="well well-sm">
