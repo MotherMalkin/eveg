@@ -111,7 +111,7 @@ function addToBasket(product, quantity) {
 
   if (quantity != parseInt(quantity)) return;
   document.getElementById('ghostHeader').style.display = 'block';
-  document.getElementById('ghostHeader').innerHTML = quantity + ' ' + product + ' added';
+  document.getElementById('ghostHeader').innerHTML = '<span style="padding-right: 68%;">' + quantity + ' ' + product + ' added</span> <input name="goToBasket" type="button" style="width:15%;" class="btn btn-success" value="Go to basket" onclick="window.location.href=\'basket.html\'"/>';
   oldquantity = parseInt(getProductQuantity(product));
   newquantity = oldquantity + parseInt(quantity);
 
