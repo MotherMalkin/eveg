@@ -111,20 +111,20 @@
                     }
                 </script>
             </div>
-        </div>
       
 
-      <div style="position: fixed; bottom: 0; left: 0; right: 0; height: 100px;">
+      <div style='padding-bottom: 10px;'>
         <script>
           var totals = calculateTotals();
             document.write('<p>Total excluding VAT: ' + totals["totalnovat"] + '<br>' + 'VAT: ' + totals["vat"] + '<br>' + 'Total including VAT:' + totals["total"] + '</p>\n');
           </script>
         <form>
-          <input type="button" name="continue" value="Continue Shopping" onclick="window.location.href='index.html'" />
-          <input type="button" name="clearbasket" value="Clear Basket" onclick="javascript:createEmptyBasket();window.location.reload()" />
-          <input type="button" name="order" value="Order" onclick="window.open('order.html')" />
+          <input type="button" name="continue" class="btn btn-default" value="Continue Shopping" onclick="window.location.href='index.html'" />
+          <input type="button" name="clearbasket" class="btn btn-default" value="Clear Basket" onclick="javascript:createEmptyBasket();window.location.reload()" />
+          <input type="button" name="order" class="btn btn-default" value="Order" onclick="window.open('order.html')" />
         </form>
       </div>
+    </div>
     </body>
 </html>
 
